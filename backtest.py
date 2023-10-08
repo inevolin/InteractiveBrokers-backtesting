@@ -10,6 +10,7 @@ import backtesting_core as core
 import numpy as np
 
 def run():
+    # Getting historical data for TSLA (14day period, 1h sticks):
     jsonurl = urlopen('https://localhost:5000/v1/api/iserver/marketdata/history?conid=76792991&period=14d&bar=1h&outsideRth=true', context=ssl._create_unverified_context())
     
     # Market data HTTP response goes here
