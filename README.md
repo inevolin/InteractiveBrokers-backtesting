@@ -3,7 +3,7 @@
 This repository provides a simple Python3 template for creating, running and visualizing backtesting algorithms on a traded security.
 
 ## Getting started
-1. Download and run the IB Client Portal API: `./bin/run.sh root/conf.yaml`
+1. Download and run the [IB Client Portal](https://www.interactivebrokers.com/en/trading/ib-api.php) : `./bin/run.sh root/conf.yaml`
 2. Authenticate through the local portal: `https://localhost:5000`
 3. Once authenticated you can make HTTP requests to obtain historical data: `https://localhost:5000/v1/api/iserver/marketdata/history?conid=76792991&period=14d&bar=1h&outsideRth=true` (the `conid` is for TSLA)
 
