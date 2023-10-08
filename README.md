@@ -11,8 +11,9 @@ This repository provides a simple Python3 template for creating, running and vis
 In the code example I obtain data for Tesla Inc. and generate buy/sell signals based on a simple heuristic.
 
 1. Ensure the Client Portal up and authenticated.
-2. Run `python3 backtest.py`.
-3. A new browser tab will open with the candlestick chart and buy/sell indicates according to the heuristic/algorithm.
-4. The script will output the ROI of the buy/sell signals (excluding transaction fees) `ROI: 5.140722` (in %).
+2. Install the required Python libs `pip install -r requirements.txt`
+3. Run `python3 backtest.py`.
+4. A new browser tab will open with the candlestick chart and buy/sell indicates according to the heuristic/algorithm.
+5. The script will output the ROI of the buy/sell signals (excluding transaction fees) `ROI: 5.140722` (in %).
 
 ![tsla](https://github.com/inevolin/InteractiveBrokers-backtesting/assets/53948000/ab29e8d1-ed60-4fcf-b336-7ed28e402880)
