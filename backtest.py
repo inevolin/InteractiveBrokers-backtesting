@@ -12,11 +12,9 @@ import numpy as np
 def run():
     # Getting historical data for TSLA (14day period, 1h sticks):
     jsonurl = urlopen('https://localhost:5000/v1/api/iserver/marketdata/history?conid=76792991&period=14d&bar=1h&outsideRth=true', context=ssl._create_unverified_context())
-    
-    # Market data HTTP response goes here
     resp = json.loads(jsonurl.read())
-    
     market = resp['data']
+
     dt_breaks = []
     def work():
         portfolio = {}
@@ -40,8 +38,9 @@ def run():
 
             core.portfolioPriceEntry(portfolio, dt, price, o, c, l, h)
 
-            # Custom algorithm:
-            # generating buy/sell signals
+            ###############################
+            #### Your Custom Algorithm ####
+            ###############################
             if len(prevs) == 2:
                 z = np.polyfit(np.arange(0,len(prevs)+1), [p['c'] for p in prevs]+[price], 1) # linear regression
                 # core.addToScatterTrace(traceA, dt, o+z[0])
@@ -52,6 +51,8 @@ def run():
                 prevs = prevs[1:] # pop first
             idx+=1
             prevs.append(entry)
+            ###############################
+            ###############################
 
         proc = core.processPortfolio(portfolio, 1)
         return (proc, portfolio, [traceA], dt_breaks)
