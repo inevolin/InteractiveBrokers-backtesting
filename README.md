@@ -1,6 +1,6 @@
 # InteractiveBrokers Backtesting
 
-This repository provides a simple Python3 template for creating and running backtesting algorithms on a historical dataset of a specific security.
+This repository provides a simple Python3 template for creating, running and visualizing backtesting algorithms on a traded security.
 
 ## Getting started
 In the code example I obtain data for Tesla Inc. and generate buy/sell signals based on a simple heuristic.
